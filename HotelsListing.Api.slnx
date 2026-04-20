@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path="HotelListing.common/HotelsListing.common.csproj" Id="725dc8a8-c555-4c5e-b674-1031743f2eb3" />
   <Project Path="HotelsListing.Api/HotelsListing.Api.csproj" />
 </Solution>

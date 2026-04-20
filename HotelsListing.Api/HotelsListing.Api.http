@@ -1,6 +1,132 @@
-@HotelsListing.Api_HostAddress = http://localhost:5027
+@HotelsListing.Api_HostAddress = https://localhost:7003
 
-GET {{HotelsListing.Api_HostAddress}}/weatherforecast/
-Accept: application/json
+
+
+
+GET {{HotelsListing.Api_HostAddress}}/api/countries
+
+###
+
+POST {{HotelsListing.Api_HostAddress}}/api/countries
+Content-Type: application/json
+
+{
+  "Name":"valaria"
+}
+
+###
+
+@id=2
+DELETE {{HotelsListing.Api_HostAddress}}/api/countries/{{id}}
+
+###
+
+GET {{HotelsListing.Api_HostAddress}}/api/countries/{{id}}
+
+###
+
+PUT {{HotelsListing.Api_HostAddress}}/api/countries/{{id}}
+Content-Type: application/json
+
+{
+  "countryId": "2",
+  "Name":"egypt"
+}
+
+###
+
+GET {{HotelsListing.Api_HostAddress}}/api/hotels
+
+###
+
+POST {{HotelsListing.Api_HostAddress}}/api/hotels
+Content-Type: application/json
+
+{
+  "Name":"dto Hotel",
+  "Rating":3.5,
+  "CountryId":2
+}
+
+###
+
+DELETE {{HotelsListing.Api_HostAddress}}/api/hotels/{{id}}
+
+###
+@id=2
+
+GET {{HotelsListing.Api_HostAddress}}/api/hotels/{{id}}
+
+###
+
+}
+
+###
+
+PUT {{HotelsListing.Api_HostAddress}}/api/hotels/{{id}}
+Content-Type: application/json
+
+{
+  "Id":2,
+  "Name":"dto Hotel",
+  "Rating":3.5,
+  "CountryId":1
+  
+}
+
+###
+
+POST {{HotelsListing.Api_HostAddress}}/Authapi/auth/login
+Content-Type: application/json
+
+{
+  "email":"mu@test.com",
+  "password":"M#m123456789"
+}
+
+###
+
+
+POST {{HotelsListing.Api_HostAddress}}/Authapi/auth/register
+Content-Type: application/json
+
+{
+   "Email":"admin@test.com",
+  "Name":"mu",
+  "PhoneNumber":"01097000641",
+  "Password":"M#m123456789",
+  "Role":"Admin"
+}
+
+###
+
+POST {{HotelsListing.Api_HostAddress}}/Authapi/auth/login
+Content-Type: application/json
+
+{
+ "Email":"mu@test.com",
+ "Password":"M#m123456789"
+}
+
+###
+
+
+
+
+
+
+
+
+POST {{HotelsListing.Api_HostAddress}}/Authapi/auth/register
+Content-Type: application/json
+
+{
+   "Email":"theadmintt@test.com",
+  "FirstName":"muham",
+  "LastName":"mu",
+  "PhoneNumber":"01097000641",
+  "Password":"M#m123456789"
+  
+}
 
 ###
